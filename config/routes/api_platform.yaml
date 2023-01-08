@@ -1,4 +1,14 @@
 api_platform:
-    resource: .
-    type: api_platform
-    prefix: /api
+    title: 'Symfony REST API'
+    description: 'A Symfony API to manage a simple blog app.'
+    version: '1.0.0'
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+    patch_formats:
+        json: ['application/merge-patch+json']
+    swagger:
+        versions: [3]
+        api_keys:
+          apiKey:
+            name: Authorization
+            type: header
